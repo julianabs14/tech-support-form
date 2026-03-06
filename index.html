@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Solicitação de Suporte Técnico</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <main>
+            <div>
+                <header>
+                    <h1 id="maintitle">Formulário de Solicitação de Suporte Técnico</h1>
+                    <p>Bem-vidos ao formulário de suporte técnico. Por favor, preencha corretamente os seus dados abaixo.</p>
+                </header>
+                
+                <form action="nextpage.html" method="GET">
+                <section id="infopes">
+                    <fieldset>
+                        <legend>Informações pessoais</legend>
+                        <div class="campo">
+                            <label for="name">Nome: </label>
+                            <input type="text" id="name" name="name" required />
+                            
+                        </div>
+
+                        <div class="campo">
+                            <label for="lastname">Sobrenome: </label>
+                            <input type="text" id="lastname" name="sobrenome" required />
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefone">Número de telefone: </label>
+                            <input type="tel" id="telefone" name="telefone" maxlength="11" pattern="[0-9]{11}" placeholder="Somente números" required />
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required />
+                        </div>
+                    </fieldset>
+                </section>
+
+                <section id="opcoes">
+                    <fieldset>
+                        <legend>Conte-nos sobre seu problema </legend>
+                        <label for="opcoes">Selecione a opção adequada: </label>
+                        <div class="campo">
+                            <select id="opcoes" name="opcoes" required>
+                                <option value="" disabled selected>Escolha...</option>
+                                <option value="hardware">Problema de hardware</option>
+                                <option value="software">Problema de software</option>
+                                <option value="rede">Problema de rede</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <label for="detalhe">Descreva seu problema detalhadamente: </label>
+                        <div class="campo">
+                            <textarea id="detalhe" cols="10" rows="10"></textarea>
+                        </div>
+
+                        <div class="btn">
+                            <button type="submit" click="direcionarASucess" id="submit">Enviar</button>
+                        </div>
+                    </fieldset>
+                </section>
+                </form>
+
+                <footer>
+                    <p>&copy; 2025, IT & Serviços. Todos os direitos reservados</p>
+                    <p>Informações de contato: <a href="contao@email.com">itserviços@email.com</a></p>
+                </footer>
+            </div>
+        </main>
+    </body>
+</html>
